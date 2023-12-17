@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Overlock:wght@400;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #eff6ee;
+    font-family: 'Overlock', sans-serif;
+}
+
+#header {
+    overflow-y: hidden;
+    height: 10vh;
+    width: 100vh;
+    border-bottom: 1px solid #cacaca;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.logo,
+.home-search-input,
+.hamburger-menu {
+    display: flex;
+    padding: 12px;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #dd0426;
+}
+
+.home-search {
+    padding: 5px;
+    border: 1px solid #273043;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+}
+
+.menu-link {
+    height: 100vh;
+    width: 100%;
+    background-color: #eff6ee;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    transition: .3s ease;
+}
+
+.menu-link.active {
+    right: 0;
+    z-index: 1;
+}
+
+.menu-link a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #dd0426;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+}
+
+.close-menu.visible {
+    visibility: visible;
+}
+
+/* HERO SECTION */
+#hero {
+    overflow-y: hidden;
+    display: flex;
+    height: 30vh;
+    width: 100%;
+}
+
+.container-hero {
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-size: 1.7rem;
+    padding: 4rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* BLACK HIGHLIGHT */
+.highlight-text {
+    color: #000;
+    font-weight: 600;
+}
+
+/* IMPACT TEXT SECTION */
+#impact-text {
+    overflow-y: hidden;
+    display: flex;
+    height: 30vh;
+    width: 100%;
+}
+
+.impact-text {
+    overflow-y: hidden;
+    display: flex;
+    position: relative;
+    top: 0;
+}
+
+.first {
+    overflow-y: hidden;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 20px;
+}
+
+/* IMPACT BUTTONS */
+#impact-buttons {
+    display: flex;
+    height: 15vh;
+    width: 100%;
+}
+
+.impact-buttons {
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
