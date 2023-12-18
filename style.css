@@ -8,6 +8,22 @@
     font-family: 'Overlock', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensuring the footer is always at the bottom and content is more visible */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between; /* Adjust layout */
+}
+
+.content {
+    flex: 1;
+}
+
 #header {
     overflow-y: hidden;
     height: 10vh;
@@ -25,7 +41,7 @@
 .home-search-input,
 .hamburger-menu {
     display: flex;
-    padding: 12px;
+    padding: 20px;
 }
 
 .logo {
@@ -82,8 +98,8 @@
 .close-menu {
     visibility: hidden;
     position: fixed;
-    top: 20px;
-    right: 50px;
+    top: 25px;
+    right: 25px;
 }
 
 .close-menu.visible {
@@ -131,6 +147,8 @@
     display: flex;
     position: relative;
     top: 0;
+    flex-direction: column; /* Added to align items vertically */
+    align-items: center; /* Center align the items */
 }
 
 .first {
@@ -140,16 +158,51 @@
     padding: 20px;
 }
 
-/* IMPACT BUTTONS */
-#impact-buttons {
-    display: flex;
-    height: 15vh;
-    width: 100%;
+/* Style for the new button */
+.user-feedback-button {
+    margin-top: 20px; /* Adds some space above the button */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #dd0426;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.impact-buttons {
-    overflow-y: hidden;
+.user-feedback-button:hover {
+    background-color: #bb031f; /* Slightly darker shade on hover */
+}
+
+/* FOOTER SECTION */
+#footer {
+    height: 12vh;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+}
+
+/* FOOTER SECTION */
+/* Footer adjustments for better visibility and layout */
+#footer {
+    background-color: #000; /* Keep or change background color for better visibility */
+    color: red; /* Change text color for better visibility */
+    background-color: black;
+    text-align: center;
+    padding: 20px 0;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center vertically */
+}
+
+#footer a {
+    color: #ffffff; /* Ensure link colors are visible */
+    margin: 0 10px; /* Adjust as needed for spacing */
+}
+
+#footer p {
+    margin-top: 10px; /* Add space above the copyright text */
 }
