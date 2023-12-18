@@ -75,6 +75,10 @@
     justify-content: center;
 }
 
+.menu-link ul {
+    list-style: none;
+}
+
 .close-menu {
     visibility: hidden;
     position: fixed;
