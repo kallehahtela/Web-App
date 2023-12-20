@@ -44,9 +44,10 @@ body {
 }
 
 .logo {
-    font-weight: 900;
-    font-size: 1.8rem;
-    color: #dd0426;
+    font-size: 2rem; /* Reduced from 1.8rem */
+    padding: 10px; /* Reduced from 20px */
+    font-weight: 700;
+    color: #bb031f;
 }
 
 .home-search {
@@ -110,21 +111,6 @@ body {
     visibility: visible;
 }
 
-/* HERO SECTION */
-#hero {
-    overflow-y: hidden;
-    display: flex;
-    height: 30vh;
-    width: 100%;
-}
-
-.container-hero {
-    overflow-y: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .text {
     font-size: 1.7rem;
     padding: 4rem;
@@ -138,35 +124,30 @@ body {
     font-weight: 600;
 }
 
-/* IMPACT TEXT SECTION */
-#impact-text {
-    overflow-y: hidden;
-    display: flex;
-    height: 30vh;
-    width: 100%;
-}
-
-.impact-text {
-    overflow-y: hidden;
-    display: flex;
-    position: relative;
-    top: 0;
-    flex-direction: column; /* Added to align items vertically */
-    align-items: center; /* Center align the items */
-}
-
-.first {
-    overflow-y: hidden;
+/* Impact Text Section with Adjustments */
+#impact-text .first {
     font-size: 1.2rem;
     text-align: center;
     padding: 20px;
+    line-height: 1.5; /* Improved line spacing for readability */
 }
 
-/* Style for the new button */
+/* Parent Container for the Button */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    /* Add any additional styling as needed */
+}
+
+/* Style for the User Feedback Button */
 .user-feedback-button {
+    align-items: center;
+    justify-content: center;
     margin-top: 20px; /* Adds some space above the button */
+    margin-bottom: 30px;
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #fff;
     background-color: #dd0426;
     border: none;
@@ -201,8 +182,8 @@ body {
 
 .hero-img {
     overflow-y: hidden;
-    width: 300px;
-    height: 200px;
+    width: 200px; /* Reduced from 300px */
+    height: 150px; /* Reduced from 200px */
     padding: 20px;
 }
 
@@ -212,15 +193,15 @@ body {
     background-color: #dd0426;
     text-align: center;
     color: #EFF6EE;
-    font-size: 1.5rem;
     text-transform: uppercase;
-    width: 300px;
-    height: 100px;
+    font-size: 1.2rem; /* Reduced from 1.5rem */
+    width: 250px; /* Reduced from 300px */
+    height: 80px; /* Reduced from 100px */
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 10px;
-    left: 40px;
+    top: 20px;
+    left: 60px;
     border-radius: 25px;
     box-shadow: 10px 20px 50px #000;
     transition: all .3 ease;
@@ -235,7 +216,7 @@ body {
     flex-direction: column; /* Keep the footer content stacked vertically */
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    height: 15vh; /* Reduced from 20vh */
     background-color: #273043;
     color: #EFF6EE;
     font-size: 1.1rem;
