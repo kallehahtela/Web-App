@@ -88,6 +88,11 @@ body {
     padding: 30px;
     align-items: center;
     justify-content: center;
+    transition: all .3 ease;
+}
+
+.menu-link a:hover {
+    transform: scale(1.05);
 }
 
 .menu-link ul {
@@ -183,23 +188,22 @@ body {
     justify-content: center;
 }
 
-/* HOME HERO */
-#home-hero {
-    display: flex;
-    overflow-y: hidden;
-    height: 30vh;
-    width: 100%;
+.content {
+    flex: 1;
 }
 
 .home-hero-container {
+    overflow-y: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 1vh;
 }
 
 .hero-img {
-    background-color: rgba(0, 0, 0, 0.04);
+    overflow-y: hidden;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
 }
 
 .call-to-action {
@@ -208,7 +212,7 @@ body {
     background-color: #dd0426;
     text-align: center;
     color: #EFF6EE;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     width: 300px;
     height: 100px;
@@ -218,5 +222,42 @@ body {
     top: 10px;
     left: 40px;
     border-radius: 25px;
-    box-shadow: 10px 10px 10px -4px  #cacaca;
+    box-shadow: 10px 20px 50px #000;
+    transition: all .3 ease;
+}
+
+.call-to-action:hover {
+    transform: scale(1.05);
+}
+
+#footer {
+    display: flex;
+    flex-direction: column; /* Keep the footer content stacked vertically */
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background-color: #273043;
+    color: #EFF6EE;
+    font-size: 1.1rem;
+}
+
+#footer .footer-links {
+    display: flex; /* Apply flex to align links side by side */
+    justify-content: center; /* Center the links horizontally */
+    background-color: #273043;
+}
+
+#footer a {
+    margin: 0 10px; /* Horizontal spacing between links */
+    color: #EFF6EE;
+    text-decoration: none; /* Optional: removes underline from links */
+    background-color: #273043;
+}
+
+#footer p {
+    margin-top: 10px;
+    color: #eff6ee;
+    text-align: center;
+    background-color: #273043;
+    padding-bottom: 2vh;
 }
