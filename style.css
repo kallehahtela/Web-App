@@ -8,6 +8,11 @@
     font-family: 'Overlock', sans-serif;
 }
 
+::selection {
+    background-color: #dd0426;
+    color: #EFF6EE;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -189,7 +194,7 @@ body {
 .call-to-action {
     display: flex;
     text-decoration: none;
-    background-color: #dd0426;
+    background-color: #273043;
     color: #EFF6EE;
     text-align: center;
     text-transform: uppercase;
@@ -203,7 +208,7 @@ body {
     left: 60px;
     border-radius: 25px;
     transition: all .3 ease;
-    box-shadow: 0 8px 10px -3px grey; 
+    box-shadow: 0px 10px 10px -3px grey; 
 }
 
 .call-to-action:hover {
@@ -277,24 +282,59 @@ body {
     transform: scale(1.05);
 }
 
-#quiz {
-    width: 70%;
+#questionnaire {
+    display: flex;
+    padding: 20px;
+    max-width: 600px;
     margin: auto;
-    padding: 30px;
-    border: 1px solid #cacaca;
-    border-radius: 5px;
+    text-align: center;
+    flex-direction: column;
 }
 
-.choice {
-    display: block;
+#question {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#choices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice-button {
+    display: flex;
     margin-bottom: 10px;
     padding: 10px;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #EFF6EE;
+    cursor: pointer;
+    width: 200px;
+    justify-content: center;
+    font-size: 1rem;
 }
 
-.choice:hover {
-    background-color: #dd0426;
+#progress {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+#result {
+    font-size: 1.3rem;
+    color: #dd0426;
+}
+
+/* CHARTS */
+.charts-text {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.highlight-red {
+    color: #dd0426;
+    font-weight: 800;
+    font-size: 1.3rem;
 }

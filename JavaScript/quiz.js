@@ -1,46 +1,85 @@
-let currentQuestion = 0;
-let score = 0;
-let questions = [
-    {
-        question: "What is 2+2?",
-        choices: ["3", "4", "5", "6"],
-        answer: 1
-    },
-    // Add more questions here
-];
+document.addEventListener('DOMContentLoaded', () => {
+    const questions = [
+        {
+            question: "How many hours do you spend on household chores each day?",
+            choices: ["under 30 min", "1-2 hours", "2 hours and over"],
+            points: [1, 2, 3]
+            
+        },
+        {
+            question: "How often do you find it difficult to balance work, personal life, and household tasks?",
+            choices: ["sometimes", "most of the time", "all the time"],
+            points: [1, 2, 3]
+        },
+        {
+            question: "How important is cost-effectiveness when you choose a service?",
+            choices: ["not at all", "ok", "really important"],
+            points: [1, 2, 3]
+        },
+        {
+            question: "How important is it to you that a portion of your spending goes towards a good cause?",
+            choices: ["not really", "kinda important", "really important"],
+            points: [1, 2, 3]
+        },
+        {
+            question: "Do you find it challenging to get help for small tasks immediately when you need it?",
+            choices: ["no", "yes", "I haven't posted any task"],
+            points: [1, 2, 3]
+        },
+        {
+            question: "Have you ever hesitated to hire someone for a task due to concerns about reliability and safety?",
+            choices: ["no", "maybe", "yes"],
+            points: [1, 2, 3]
+        }
+    ];
 
-function startQuiz() {
-    showQuestion();
-}
+    let currentQuestionIndex = 0;
+    let totalScore = 0;
 
-function showQuestion() {
-    let question = questions[currentQuestion];
-    document.getElementById("question").textContent = question.question;
-    let choices = document.querySelectorAll(".choice");
-    choices.forEach((choice, index) => {
-        choice.textContent = question.choices[index];
-    });
-}
+    const questionElement = document.getElementById('question');
+    const choicesElement = document.getElementById('choices');
+    const progressElement = document.getElementById('progress');
+    const resultElement = document.getElementById('result'); // Element to display the result
 
-function selectAnswer(choice) {
-    if (choice === questions[currentQuestion].answer) {
-        score++;
+    function updateQuestion() {
+        const currentQuestion = questions[currentQuestionIndex];
+        questionElement.textContent = currentQuestion.question;
+        choicesElement.innerHTML = '';
+        currentQuestion.choices.forEach((choice, index) => {
+            const button = document.createElement('button');
+            button.textContent = choice;
+            button.classList.add('choice-button');
+            button.addEventListener('click', () => selectChoice(index));
+            choicesElement.appendChild(button);
+        });
+        progressElement.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
     }
-    nextQuestion();
-}
 
-function nextQuestion() {
-    currentQuestion++;
-    if (currentQuestion < questions.length) {
-        showQuestion();
-    } else {
-        showResults();
+    function selectChoice(choiceIndex) {
+        // Add points to the total score
+        totalScore += questions[currentQuestionIndex].points[choiceIndex];
+
+        if (currentQuestionIndex < questions.length - 1) {
+            currentQuestionIndex++;
+            updateQuestion();
+        } else {
+            displayResult();
+        }
     }
-}
 
-function showResults() {
-    document.getElementById("quiz").innerHTML = `<h2>Your score: ${score}/${questions.length}</h2>`;
-}
+    function displayResult() {
+        // Logic to display different outcomes based on the score
+        let outcome;
+        if (totalScore <= 6) {
+            outcome = "Fibaste can make your life a much easier";
+        } else if (totalScore <= 12) {
+            outcome = "Fibaste will help in your life and you will get more time to things that matters the most";
+        } else {
+            outcome = "We can save multiple hours on a daily basis by delegating chores";
+        }
 
-// Start the quiz
-startQuiz();
+        resultElement.textContent = `Your result: ${outcome}`;
+    }
+
+    updateQuestion();
+});
