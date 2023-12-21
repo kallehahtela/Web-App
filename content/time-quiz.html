@@ -32,6 +32,17 @@
     </div>
 </section>
 
+<div id="quiz">
+    <h2 id="question">Question text here</h2>
+    <div class="choices">
+        <button class="choice" onclick="selectAnswer(0)">Option 1</button>
+        <button class="choice" onclick="selectAnswer(1)">Option 2</button>
+        <button class="choice" onclick="selectAnswer(2)">Option 3</button>
+        <button class="choice" onclick="selectAnswer(3)">Option 4</button>
+    </div>
+    <button id="nextButton" onclick="nextQuestion()">Next</button>
+</div>
+
 <section id="footer">
     <div class="footer-links">
         <a href="/content/faq.html">FAQ</a> | <a href="/content/faq.html">HELP</a>
@@ -39,6 +50,8 @@
     </div>
     <p>&copy; Fibaste 2023. All rights reserved.</p>
 </section>
+
+<script src="/JavaScript/quiz.js"></script>
 <script src="/JavaScript/script.js"></script>
 </body>
 </html>

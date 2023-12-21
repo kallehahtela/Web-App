@@ -12,7 +12,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Ensuring the footer is always at the bottom and content is more visible */
 body {
     display: flex;
     flex-direction: column;
@@ -25,8 +24,8 @@ body {
 
 #header {
     overflow-y: hidden;
-    height: 10vh;
-    width: 100vh;
+    height: 12vh;
+    width: 100%;
     border-bottom: 1px solid #cacaca;
 }
 
@@ -191,20 +190,20 @@ body {
     display: flex;
     text-decoration: none;
     background-color: #dd0426;
-    text-align: center;
     color: #EFF6EE;
+    text-align: center;
     text-transform: uppercase;
-    font-size: 1.2rem; /* Reduced from 1.5rem */
-    width: 250px; /* Reduced from 300px */
-    height: 80px; /* Reduced from 100px */
+    font-size: 1.2rem;
+    width: 250px;
+    height: 80px;
     justify-content: center;
     align-items: center;
     position: relative;
     top: 20px;
     left: 60px;
     border-radius: 25px;
-    box-shadow: 10px 20px 50px #000;
     transition: all .3 ease;
+    box-shadow: 0 8px 10px -3px grey; 
 }
 
 .call-to-action:hover {
@@ -220,6 +219,7 @@ body {
     background-color: #273043;
     color: #EFF6EE;
     font-size: 1.1rem;
+    margin-top: 40px;
 }
 
 #footer .footer-links {
@@ -231,7 +231,7 @@ body {
 #footer a {
     margin: 0 10px; /* Horizontal spacing between links */
     color: #EFF6EE;
-    text-decoration: none; /* Optional: removes underline from links */
+    text-decoration: none;
     background-color: #273043;
 }
 
@@ -241,4 +241,60 @@ body {
     text-align: center;
     background-color: #273043;
     padding-bottom: 2vh;
+}
+
+/* CARDS */
+.cards1,
+.cards2 {
+    padding-top: 8vh;
+    display: flex;
+    height: 20vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.card1,
+.card2 {
+    margin: 0 20px;
+    border: 1px solid #cacaca;
+    height: 13vh;
+    width: 12vh;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: #273043;
+    box-shadow: 0 2px 7px -4px grey;
+    transition: all .3 ease;
+}
+
+.card1:hover,
+.card2:hover {
+    transform: scale(1.05);
+}
+
+#quiz {
+    width: 70%;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+}
+
+.choice {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #EFF6EE;
+}
+
+.choice:hover {
+    background-color: #dd0426;
 }
