@@ -338,3 +338,139 @@ body {
     font-weight: 800;
     font-size: 1.3rem;
 }
+
+.charts-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.charts1,
+.charts2,
+.charts3,
+.charts4 {
+    display: flex;
+    width: 160px;
+    height: 160px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cacaca;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 7px -4px grey;
+    transition: all .3 ease;
+}
+
+.info-charts1,
+.info-charts2,
+.info-charts3,
+.info-charts4 {
+    text-transform: uppercase;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.charts1:hover,
+.charts2:hover,
+.charts3:hover,
+.charts4:hover {
+    transform: scale(1.05);
+}
+
+/* EXPLORE TAB */
+.filters {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#no-results-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maps-icon {
+    cursor: pointer;
+}
+
+.add-icon {
+    cursor: pointer;
+}
+
+
+.job-posting {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #cacaca;
+    box-shadow: 2px 2px 5px grey;
+    padding: 10px;
+    max-width: 400px;
+    text-decoration: none;
+    color: #000;
+}
+
+.username {
+    align-self: flex-start;
+}
+
+.title-prize {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.prize {
+    background-color: #273043;
+    color: #EFF6EE;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* FAQ */
+.accordion-button {
+    background-color: #273043;
+    color: #eff6ee;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion-button .button-sign {
+    float: right;
+}
+
+.accordion-content {
+    padding: 20px 20px;
+    display: none;
+    overflow: hidden;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
