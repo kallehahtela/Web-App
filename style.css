@@ -174,7 +174,9 @@ body {
 }
 
 .content {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .home-hero-container {
@@ -380,30 +382,40 @@ body {
     transform: scale(1.05);
 }
 
-/* EXPLORE TAB */
+/* FILTERING */
 .filters {
     display: flex;
-    height: 10vh;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
+    justify-content: space-between; /* Distributes space evenly between elements */
+    align-items: center; /* Aligns items vertically in the center */
+    padding: 10px; /* Add padding as needed */
 }
 
+.filters a,
+.filters select {
+    flex: 1; /* Allows each item to take equal space */
+    text-align: center; /* Center the content */
+}
+
+/* Style the select dropdown */
+#sort-options {
+    max-width: 200px; /* Adjust as needed */
+    margin: 0 auto; /* Centers the dropdown */
+}
+
+/* Additional styles for icons if needed */
+.maps-icon,
+.add-icon {
+    display: block; /* Make images block level for margin auto to work */
+    margin: 0 auto; /* Center images within their flex item */
+}
+
+
+/* EXPLORE */
 #no-results-message {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.maps-icon {
-    cursor: pointer;
-}
-
-.add-icon {
-    cursor: pointer;
-}
-
 
 .job-posting {
     display: flex;
@@ -415,6 +427,7 @@ body {
     max-width: 400px;
     text-decoration: none;
     color: #000;
+    transition: height 0.3s, visibility 0.3s; /* Smooth transition for hiding/showing */
 }
 
 .username {
