@@ -33,20 +33,19 @@
 </section>
 
 <div class="content">
-    <div class="home-hero-container">
-        <img class="hero-img" src="/assets/hero-self-made.png" alt="hero img">
-    </div>
+    <div class="form">
+        <form action="">
+            <input required class="inputText" type="text" id="firstName" name="firstName" placeholder="Enter your first name">
+            <input required class="inputText" type="text" id="lastName" name="lastName" placeholder="Enter your lastname">
+            <input required class="inputText" type="email" id="email" name="email" placeholder="Enter your email">
+            <textarea required class="inputText textarea" id="textarea" name="textarea" placeholder="Your message..." maxlength="1000" oninput="updateCharacterCount()"></textarea>
+            <div id="characterCount" class="characterCount">0 / 1000</div>
 
-    <a class="call-to-action" href="/content/impact.html">You can change<br> the world - Act Now</a>
-
-    <div class="cards1">
-        <a class="card1" href="/content/time-quiz.html">Time Saving Quiz</a>
-        <a class="card1" href="/content/user-stories.html">User Stories</a>
-    </div>
-
-    <div class="cards2">
-        <a class="card2" href="/content/charts.html">Charts</a>
-        <a class="card2" href="/content/dashboard.html">Dashboard</a>
+            <div class="form-buttons">
+                <a href=""><button class="btn send" type="submit">Send</button></a>
+                <a href=""><button class="btn reset" type="reset">Reset</button></a>
+            </div>
+        </form>
     </div>
 </div>
 
@@ -59,5 +58,6 @@
 
 <script src="/JavaScript/script.js"></script>
 <script src="/JavaScript/searchTask.js"></script>
+<script src="/JavaScript/marksCounter.js"></script>
 </body>
 </html>

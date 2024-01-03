@@ -97,7 +97,7 @@ body {
 }
 
 .menu-link a:hover {
-    transform: scale(1.05);
+    color: #273043;
 }
 
 .menu-link ul {
@@ -161,9 +161,6 @@ body {
     text-decoration: none; /* Removes underline from link */
 }
 
-.user-feedback-link:hover {
-    background-color: #bb031f; /* Slightly darker shade on hover */
-}
 
 /* FOOTER SECTION */
 #footer {
@@ -215,7 +212,7 @@ body {
 }
 
 .call-to-action:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 #footer {
@@ -241,6 +238,10 @@ body {
     color: #EFF6EE;
     text-decoration: none;
     background-color: #273043;
+}
+
+#footer a:hover {
+    color: #dd0426;
 }
 
 #footer p {
@@ -468,6 +469,7 @@ body {
     border: none;
     outline: none;
     transition: 0.4s;
+    font-size: 1rem;
 }
 
 .accordion-button .button-sign {
@@ -478,6 +480,7 @@ body {
     padding: 20px 20px;
     display: none;
     overflow: hidden;
+    font-size: 1.1rem;
 }
 
 .search-container input {
@@ -533,5 +536,101 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    padding-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.current-task-posted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #cacaca;
+    width: 80%;
+    margin-left: 35px;
+    background-color: rgba(221, 4, 38, 1);
+}
+
+.posted-title {
+    padding: 10px;
+    font-size: 1.3rem;
+    background-color: rgba(221, 4, 38, 1);
+    color: #EFF6EE;
+}
+
+.hr-line {
+    width: 70%;
+    margin-top: -20px;
+}
+
+.posted-amount {
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+    background-color: rgba(221, 4, 38, 1);
+    color: #EFF6EE;
+}
+
+/* CONTACT */
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputText {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    width: 250px;
+}
+
+.textarea {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    height: 100px;
+}
+
+.characterCount {
+    margin: 20px;
+    color: #666;
+    font-size: 0.8em;
+}
+
+.form-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 20px;
+    width: 100px;
+    margin: 20px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.send {
+    background-color: #273043;
+    color: #EFF6EE;
+}
+
+.reset {
+    background-color: #bb031f;
+    color: #EFF6EE;
+}
+
+.send:hover {
+    background-color: #008000;
+}
+
+.reset:hover {
+    background-color: #ff0000;
 }
